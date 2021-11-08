@@ -1,4 +1,4 @@
-package designpattern.creational;
+package designpattern.creational.singleton;
 
 import java.io.Serializable;
 
@@ -7,7 +7,7 @@ public class Singleton implements Serializable {
     private static volatile Singleton singleton;
 
     /**
-     * To overcome reflection issue
+     * Overcome reflection issue
      */
     private Singleton() {
         if (singleton != null) {
@@ -37,7 +37,7 @@ public class Singleton implements Serializable {
     }
 
     /**
-     * To Overcome serialization issue
+     * Overcome serialization issue
      * @return
      */
     protected Object readResolve() {
